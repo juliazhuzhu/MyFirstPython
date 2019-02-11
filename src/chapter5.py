@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 定义一个继承object的类
 class Human(object):
 
@@ -48,3 +49,17 @@ j.get_species()   # => "H. neanderthalensis"
 
 # 调用静态方法
 Human.grunt()   # => "*grunt*"
+=======
+# 函数在Python是一等公民
+def create_adder(x):
+    def adder(y):
+        return x + y
+    return adder
+
+add_10 = create_adder(10)
+print(add_10(3))   # => 13
+
+# 用列表推导式可以简化映射和过滤。列表推导式的返回值是另一个列表。
+print([add_10(i) for i in [1, 2, 3]])  # => [11, 12, 13]
+print([x for x in [3, 4, 5, 6, 7] if x > 5])   # => [6, 7]
+>>>>>>> 4 and 5 part
