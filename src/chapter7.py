@@ -14,3 +14,14 @@ def f(x):
     return x + x * x
 
 print(f(x=7))
+
+
+def fun5():
+    x=40
+    def fun6():
+        print(x)
+        print("fun6")
+    
+    return fun6
+
+fun5()()

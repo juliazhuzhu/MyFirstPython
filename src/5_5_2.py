@@ -8,5 +8,5 @@ while 1:
     offset = level
     for row in range (level):
         mat = "{:>%d}" % (row + offset)
-        show = "*"*(2 * (row) + 1)
-        print(mat.format(show))
+        star = "*"*(2 * (row) + 1)
+        print(mat.format(star))
