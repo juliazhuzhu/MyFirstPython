@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<title>Flask WTFZ支持的组件测试</title>
+	</head>
+	<body>
+	{% if ok %}
+	<script>
+		alert('录入成功')
+	</script>
+	{% endif %}
+	{% for message in form.radio.errors %}
+		<div>{{message}}
+	{% endfor %}
+	{% for message in form.select.errors %}
+		<div>{{message}}
+	{% endfor %}
+	{% for message in form.selectMulti.errors %}
+		<div>{{message}}
+	{% endfor %}
+
+	<form action='http://localhost:8002' method=post>
+	<fieldset>
+		{{form.hidden_tag()}}
+		{{form.radio.label}}<br>
+		{{form.radio}}<br>
+		{{form.select.label}}<br>
+		{{form.select}}<br>
+		{{form.selectMulti.label}}<br>
+		{{form.selectMulti}}
+		<br>
+		<br>
+		{{form.submit}}
+	</fieldset>
+	</form>
+	</body>
+</html>

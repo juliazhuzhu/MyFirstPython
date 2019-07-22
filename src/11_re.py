@@ -64,4 +64,13 @@ if m is not None:
     
 m = re.match(s,'2099-13-11')
 if m is not None:
-    print(m.group())       
+    print(m.group())  
+    
+htmlStr = '<a href=\'a.html\'>aaa</a> <a href=\'b.html\'>bbb</a>'
+aList = re.findall('<a[^>]*>',htmlStr)     
+print(aList)
+
+for a in aList:
+    g = re.search('href[\s]*=[\s]*[\'"]([^>\'""]*)[\'"]',a)
+    print(g)
+    print(g.group(1))
